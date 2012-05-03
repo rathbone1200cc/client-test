@@ -1,0 +1,7 @@
+{
+	"name":"node-soc-int",
+	"version": "0.0.1",
+	"bin": {
+		"node-soc-int": "./run-tests.js"
+	}
+}
