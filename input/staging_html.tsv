@@ -1,4 +1,5 @@
-http://opendata.test-socrata.com/	render=“.browseList”
-https://opendata.test-socrata.com/dataset/Area-group/wzcz-tpfw	render
-https://opendata.test-socrata.com/Education/Mappp/f22s-cyhe	
-https://opendata.test-socrata.com/dataset/grp1/8xk2-eubk	
+http://opendata.test-socrata.com/	responsePerf	assert resultShape “['metro_area']”
+https://opendata.test-socrata.com/dataset/Area-group/wzcz-tpfw	responsePerf	
+https://opendata.test-socrata.com/Education/Mappp/f22s-cyhe	responsePerf	
+http://danrathbone.com	responsePerf	
+http://cnn.com	responsePerf	

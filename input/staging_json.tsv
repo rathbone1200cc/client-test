@@ -1,3 +1,3 @@
-http://opendata.test-socrata.com/resource/zanv-9p4p.json/1?$select=location	outputResponse
-http://opendata.test-socrata.com/resource/zanv-9p4p.json?$select=location	outputResponse
-https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20metro_area	outputResponse
+http://opendata.test-socrata.com/resource/zanv-9p4p.json/1?$select=location	outputResponse	
+http://opendata.test-socrata.com/resource/zanv-9p4p.json?$select=location	outputResponse	
+https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20metro_area	outputResponse	assert resultShape “['metro_area']”

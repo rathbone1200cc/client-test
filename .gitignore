@@ -1,4 +1,5 @@
 *.swp
+*.swo
 .~lock*
 node_modules/
 output/
