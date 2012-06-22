@@ -1,3 +1,0 @@
-http://opendata.test-socrata.com/resource/zanv-9p4p.json/1?$select=location	responsePerf		
-https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20emissions_prevented,metro_area	responsePerf		
-https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20emissions_prevented,metro_area	assert	resultShape	['metro_area', 'emissions_prevented']

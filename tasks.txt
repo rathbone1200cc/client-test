@@ -1,0 +1,11 @@
+read query, encode as query string
+log to console
+write some tests for the client test harness
+  make sure all the options work, across all files
+
+
+goals:
+sane option hierarchy
+  csv commands
+  command line options
+  option modeling, injection
