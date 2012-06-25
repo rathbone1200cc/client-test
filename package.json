@@ -3,5 +3,11 @@
 	"version": "0.0.1",
 	"bin": {
 		"node-soc-int": "./run-tests.js"
-	}
+	},
+  "dependencies": {
+    "async": "0.1.18",
+    "phantom":"0.3.3",
+    "underscore":"1.3.3",
+    "underscore.string":"2.2.0rc"
+  }
 }
