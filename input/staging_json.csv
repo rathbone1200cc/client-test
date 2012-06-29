@@ -1,7 +1,7 @@
-http://opendata.test-socrata.com/resource/zanv-9p4p.json?$select=location	responsePerf	consoleResponse		disabled
-http://opendata.test-socrata.com/resource/zanv-9p4p.json	responsePerf		encodeQuery	select flight
-http://opendata.test-socrata.com/resource/zanv-9p4p.json	responsePerf		encodeQuery	select time
-http://opendata.test-socrata.com/resource/zanv-9p4p.json	responsePerf		encodeQuery	select location
-https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20emissions_prevented,metro_area	responsePerf	consoleResponse		disabled
-https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20metro_area	assert	resultShape	['metro_area']	disabled
-https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20emissions_prevented,metro_area	assert	resultShape	['metro_area', 'emissions_prevented']	disabled
+http://opendata.test-socrata.com/resource/zanv-9p4p.json?$select=location	responsePerf	consoleResponse			disabled
+http://opendata.test-socrata.com/resource/zanv-9p4p.json	responsePerf		encodeQuery	select flight	
+http://opendata.test-socrata.com/resource/zanv-9p4p.json	responsePerf		encodeQuery	select time	disabled
+http://opendata.test-socrata.com/resource/zanv-9p4p.json	responsePerf		encodeQuery	select location	disabled
+https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20emissions_prevented,metro_area	responsePerf	consoleResponse			disabled
+https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20metro_area	assert	resultShape	['metro_area']		disabled
+https://opendata.test-socrata.com/id/3yay-y7gc.json?$query=%20select%20emissions_prevented,metro_area	assert	resultShape	['metro_area', 'emissions_prevented']		disabled

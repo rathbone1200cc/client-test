@@ -1,0 +1,10 @@
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where beat = 2024	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where BEAT = 2024	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where id = 8664741	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where case_number='HV283007'	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where ID = 8664741	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = 1	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where case_number=UPPER('hv283007')	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where STARTS_WITH('case_number','HV28300')	disabled	responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id >= 1 and :id <= 100	disabled	responsePerf	consoleResponse	assert	rowCount	100
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id >= 1 and :id <= 100 limit 99		responsePerf	consoleResponse			
