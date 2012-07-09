@@ -12,25 +12,16 @@ https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * w
 								
 								
 								
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	18976	
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	38722	
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	77237	
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	154290	
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	321568	
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	643330	
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	1289030	
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	2579286	
 								
 								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	18976	
-https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	38722	
-https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	77237	
-https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	154290	
-https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	321568	
-https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	643330	
-https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	1289030	
-https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * where :id = RID		responsePerf	consoleResponse	randomID	2579286	
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select *		responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select *		responsePerf	consoleResponse	addQueryParameter	$limit	10
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * limit 10		responsePerf	consoleResponse			
