@@ -1,27 +1,72 @@
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where beat = 2024	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where BEAT = 2024	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where id = 8664741	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where case_number='HV283007'	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where ID = 8664741	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = 1	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where case_number=UPPER('hv283007')	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where STARTS_WITH('case_number','HV28300')	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id >= 1 and :id <= 100	disabled	responsePerf	consoleResponse	assert	rowCount	100
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id >= 1 and :id <= 100 limit 99	disabled	responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	100	
-								
-								
-								
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	18976	
-https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	38722	
-https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	77237	
-https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	154290	
-https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	321568	
-https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	643330	
-https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	1289030	
-https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	2579286	
-								
-								
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select *		responsePerf	consoleResponse			
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select *		responsePerf	consoleResponse	addQueryParameter	$limit	10
-https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * limit 10		responsePerf	consoleResponse			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where beat = 2024	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where BEAT = 2024	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where id = 8664741	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where case_number='HV283007'	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where ID = 8664741	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = 1	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where case_number=UPPER('hv283007')	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where STARTS_WITH('case_number','HV28300')	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id >= 1 and :id <= 100	disabled	responsePerf	consoleResponse	assert	rowCount	100			
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id >= 1 and :id <= 100 limit 99	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	100				
+											
+											
+											
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	18976				
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	38722				
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	77237				
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	154290				
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	321568				
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	643330				
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	1289030				
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * where :id = RID	disabled	responsePerf	consoleResponse	randomID	2579286				
+											
+											
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select *	disabled	responsePerf	consoleResponse						
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select *	disabled	responsePerf	consoleResponse	addQueryParameter	$limit	10			
+											
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * limit 999	disabled	responsePerf	consoleResponse	assert	rowCount	999			
+											
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999				
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select * limit 999	disabled	responsePerf	assert	rowCount	999		addQueryParameter	$pipe	FALSE
+											
+											
+											
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	18976	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	38722	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	77237	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	154290	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	321568	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	643330	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	1289030	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select RSELECT where :id = RID	disabled	responsePerf	consoleResponse	randomID	2579286	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code		
+											
+https://opendata.test-socrata.com/resource/esj4-ype6.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET		responsePerf	consoleResponse	randomLimit	1000	randomOffset	18976	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/bbzk-w6cf.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	38722	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/q6ce-vuci.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	77237	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/2jpv-5se7.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	154290	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/hciq-d5f5.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	321568	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/tpj8-3bpe.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	643330	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/fgah-rnve.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	1289030	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+https://opendata.test-socrata.com/resource/qrqr-xi46.json	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	disabled	responsePerf	consoleResponse	randomLimit	1000	randomOffset	2579286	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
