@@ -3,39 +3,54 @@ var fs    = require("fs"),
     _s    = require("underscore.string"),
     async = require("async"),
     customAssert = require("../assert.js"),
-    url   = require("url")
+    url   = require("url"),
+    clientTest = require('../../lib/clientTest.js')
 
 
-exports.makeTests = function(file){
-  var lines = fs.readFileSync(file).toString().split('\n')
 
-  var tests = _.chain(lines)
+
+
+var tests = []
+exports.init = function(context) {
+  var lines = fs.readFileSync(context.inputFile).toString().split('\n')
+
+  tests = _.chain(lines)
     .filter(function(line){return line.trim().length > 0})
-    .map(function(line){return parseLine(line)})
+    .map(function(line){return parseLine(line, context)})
     .filter(function(testOptions){ return !testOptions.disabled})
-
     .value()
 
   console.log('read ' + tests.length + " eligible from input file")
-  return tests;
 }
 
 
-var parseLine = function(line) {
+exports.nextTests = function() {
+   return tests;
+}
+
+
+// Self-registerring parser
+exports.register = function() {
+  clientTest.registerParser('soqlParser', exports)
+}
+
+
+
+var parseLine = function(line, context) {
   var options = {}
+
   var args = line.split(',')
-  //options.testUrl = globalOptions.hostnames[0] + "/resource/" + args[0] + ".json"
-  //options.inputPath = args[0] + ".json"
 
   var resource = url.parse(args[0])
   if(resource.host) {
     // It's a full URL, so we'll override the hostnames array
     console.log("Host: " + resource.host)
-    options.hostnames = [resource.protocol + "//" + resource.host]
+    parseOptions.hostnames = [resource.protocol + "//" + resource.host]
     options.inputPath = resource.path
   } else {
     // Not a path - treat as a SOQL resource
     options.inputPath = "/resource/" + args[0] + ".json"
+    options.hostnames = context.hostnames
   }
 
 
@@ -55,8 +70,8 @@ var parseLine = function(line) {
         var val = consume()
         options.inputPath += '&' + encodeURIComponent(param) + '=' + encodeURIComponent(val)
         break;
-      case 'outputResponse': 
-        options.outputResponse = true
+      case 'logResponse': 
+        options.logResponse = true
         options.driver = "nodeRequest"
         break;
       case 'responsePerf':
@@ -65,13 +80,13 @@ var parseLine = function(line) {
         break;
       case 'assert':
         options.assert = options.assert || []
-    	  options.assert.push( customAssert.getAssertion(consume(), eval(consume())) )
+    	  options.assert.push( { check : consume(), expect : eval(consume()) })
         options.driver = "nodeRequest"
         break;
       case 'compareEndpoints':
         options.compare = options.compare || []
         var assertion = consume()
-        options.compare.push( customAssert.getComparator(assertion) )
+        options.compare.push( assertion )
 
         options.driver = "nodeRequest"
         break;
@@ -99,7 +114,8 @@ var parseLine = function(line) {
         options.selectRandomColumn = true
         break;
       case 'renderPage':
-        options.renderPage = true
+        options.driverOptions = options.driverOptions || {}
+        options.driverOptions.renderPage = true
         options.driver = "phandomDriver"
         break;
       case 'domPerf':
@@ -107,7 +123,7 @@ var parseLine = function(line) {
         options.driver = "phandomDriver"
         break;
       case 'domContent':
-        options.domContent = true
+        options.logResponse = true
         options.driver = "phandomDriver"
         break;
       case 'disabled':
@@ -116,16 +132,15 @@ var parseLine = function(line) {
   }
 
 
-  options.relativeUrl = function() { return generateRelativeUrl(options) }
+  options.testUrls = function() { return generateUrls(options) }
 
   //console.log(options)
   return options
 }
 
 
-var generateRelativeUrl = function(options) {
+var generateUrls = function(options) {
   // var options = _.clone(options)
-
   var generatedPath = options.inputPath
 
   var replaceAll = function(str, o, n) { return str.split(o).join(n) }
@@ -162,7 +177,7 @@ var generateRelativeUrl = function(options) {
     generatedPath = replaceAll(generatedPath, "RCOLUMN", encodeURIComponent(selectColumn))
   }
 
-  console.log("inputPath:\t" + options.inputPath)
-  console.log("generatedPath:\t" + generatedPath)
-  return generatedPath
+  // console.log("inputPath:\t" + options.inputPath)
+  // console.log("generatedPath:\t" + generatedPath)
+  return _.map(options.hostnames, function(host) { return url.resolve(host, generatedPath) })
 }
