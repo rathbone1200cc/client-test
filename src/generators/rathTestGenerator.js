@@ -2,9 +2,7 @@ var fs    = require("fs"),
     _     = require("underscore"),
     _s    = require("underscore.string"),
     async = require("async"),
-    customAssert = require("../assert.js"),
-    url   = require("url"),
-    clientTest = require('../../lib/clientTest.js')
+    url   = require("url")
 
 
 
@@ -28,18 +26,17 @@ exports.nextTests = function() {
    return tests;
 }
 
-
-// Self-registerring parser
+/// Self-register generator
 exports.register = function() {
-  clientTest.registerParser('soqlParser', exports)
+    var clientTest = require('../../lib/clientTest.js')
+    clientTest.registerGenerator('rathTestGenerator', exports)
 }
-
 
 
 var parseLine = function(line, context) {
   var options = {}
 
-  var args = line.split(',')
+  var args = line.split('\t')
 
   var resource = url.parse(args[0])
   if(resource.host) {

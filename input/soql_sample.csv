@@ -1,76 +1,76 @@
-chicagocrime18k, encodeQuery, Select * where id = 8664741, responsePerf, assert, rowCount, 1
-chicagocrime18k, encodeQuery, Select * where case_number='HV283007', responsePerf
-chicagocrime18k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-chicagocrime18k, encodeQuery, Select * where id = 8664741, responsePerf
-chicagocrime18k, encodeQuery, Select * where :id = 1, responsePerf
-chicagocrime18k, encodeQuery, Select * where case_number=UPPER('hv283007'), responsePerf
-chicagocrime18k, encodeQuery, Select * where STARTS_WITH('case_number','HV28300'), responsePerf
-chicagocrime18k, encodeQuery, Select * where :id >= 1 and :id <= 100, responsePerf, assert, rowCount, 100
-chicagocrime18k, encodeQuery, Select * where :id >= 1 and :id <= 100 limit 99, responsePerf
-chicagocrime18k, encodeQuery, Select * where :id = RID, responsePerf, randomID, 100
+chicagocrime18k	encodeQuery	Select * where id = 8664741	responsePerf	assert	jsonResultCount	1
+chicagocrime18k	encodeQuery	Select * where case_number='HV283007'	responsePerf
+chicagocrime18k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+chicagocrime18k	encodeQuery	Select * where id = 8664741	responsePerf
+chicagocrime18k	encodeQuery	Select * where :id = 1	responsePerf
+chicagocrime18k	encodeQuery	Select * where case_number=UPPER('hv283007')	responsePerf
+chicagocrime18k	encodeQuery	Select * where STARTS_WITH('case_number','HV28300')	responsePerf
+chicagocrime18k	encodeQuery	Select * where :id >= 1 and :id <= 100	responsePerf	assert	jsonResultCount	100
+chicagocrime18k	encodeQuery	Select * where :id >= 1 and :id <= 100 limit 99	responsePerf
+chicagocrime18k	encodeQuery	Select * where :id = RID	responsePerf	randomID	100
 
-chicagocrime18k, encodeQuery, Select * where :id = RID, responsePerf, randomID, 18975
-chicagocrime36k, encodeQuery, Select * where :id = RID, responsePerf, randomID, 38721
-chicagocrime77k, encodeQuery, Select * where :id = RID, responsePerf, randomID, 77236
-2jpv-5se7, encodeQuery, Select * where :id = RID, responsePerf, randomID, 154290, disabled
-hciq-d5f5, encodeQuery, Select * where :id = RID, responsePerf, randomID, 321568, disabled
-tpj8-3bpe, encodeQuery, Select * where :id = RID, responsePerf, randomID, 643330, disabled
-fgah-rnve, encodeQuery, Select * where :id = RID, responsePerf, randomID, 1289030, disabled
-qrqr-xi46, encodeQuery, Select * where :id = RID, responsePerf, randomID, 2579286, disabled
+chicagocrime18k	encodeQuery	Select * where :id = RID	responsePerf	randomID	18975
+chicagocrime36k	encodeQuery	Select * where :id = RID	responsePerf	randomID	38721
+chicagocrime77k	encodeQuery	Select * where :id = RID	responsePerf	randomID	77236
+2jpv-5se7	encodeQuery	Select * where :id = RID	responsePerf	randomID	154290	disabled
+hciq-d5f5	encodeQuery	Select * where :id = RID	responsePerf	randomID	321568	disabled
+tpj8-3bpe	encodeQuery	Select * where :id = RID	responsePerf	randomID	643330	disabled
+fgah-rnve	encodeQuery	Select * where :id = RID	responsePerf	randomID	1289030	disabled
+qrqr-xi46	encodeQuery	Select * where :id = RID	responsePerf	randomID	2579286	disabled
 
-chicagocrime18k, encodeQuery, Select *, responsePerf 
-chicagocrime18k, encodeQuery, Select * where BEAT = 2024, responsePerf
+chicagocrime18k	encodeQuery	Select *	responsePerf 
+chicagocrime18k	encodeQuery	Select * where BEAT = 2024	responsePerf
 
-chicagocrime18k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-chicagocrime36k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-chicagocrime77k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-2jpv-5se7, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-hciq-d5f5, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-tpj8-3bpe, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-fgah-rnve, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-qrqr-xi46, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
+chicagocrime18k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+chicagocrime36k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+chicagocrime77k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+2jpv-5se7	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+hciq-d5f5	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+tpj8-3bpe	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+fgah-rnve	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+qrqr-xi46	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
 
-chicagocrime18k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-chicagocrime36k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-chicagocrime77k, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999
-2jpv-5se7, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-hciq-d5f5, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-tpj8-3bpe, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-fgah-rnve, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
-qrqr-xi46, encodeQuery, Select * limit 999, responsePerf, assert, rowCount, 999, disabled
+chicagocrime18k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+chicagocrime36k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+chicagocrime77k	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999
+2jpv-5se7	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+hciq-d5f5	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+tpj8-3bpe	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+fgah-rnve	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
+qrqr-xi46	encodeQuery	Select * limit 999	responsePerf	assert	jsonResultCount	999	disabled
 
-chicagocrime18k, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 18975, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime36k, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 38721, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime77k, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 77236, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-2jpv-5se7, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 154290, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-hciq-d5f5, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 321568, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-tpj8-3bpe, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 643330, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-fgah-rnve, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 1289030, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-qrqr-xi46, encodeQuery, Select RSELECT where :id = RID, responsePerf, randomID, 2579286, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
+chicagocrime18k	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	18975	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime36k	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	38721	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime77k	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	77236	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+2jpv-5se7	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	154290	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+hciq-d5f5	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	321568	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+tpj8-3bpe	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	643330	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+fgah-rnve	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	1289030	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+qrqr-xi46	encodeQuery	Select RSELECT where :id = RID	responsePerf	randomID	2579286	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
 
-chicagocrime18k, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 18975, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime36k, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 38721, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime77k, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 77236, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-2jpv-5se7, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 154290, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-hciq-d5f5, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 321568, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-tpj8-3bpe, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 643330, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-fgah-rnve, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 1289030, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-qrqr-xi46, encodeQuery, Select RSELECT limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 2579286, randomSelect, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
+chicagocrime18k	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	18975	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime36k	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	38721	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime77k	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	77236	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+2jpv-5se7	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	154290	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+hciq-d5f5	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	321568	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+tpj8-3bpe	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	643330	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+fgah-rnve	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	1289030	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+qrqr-xi46	encodeQuery	Select RSELECT limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	2579286	randomSelect	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
 
-chicagocrime18k, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime36k, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime77k, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-2jpv-5se7, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-hciq-d5f5, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-tpj8-3bpe, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-fgah-rnve, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-qrqr-xi46, encodeQuery, Select RCOLUMN group by RCOLUMN, responsePerf, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
+chicagocrime18k	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime36k	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime77k	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+2jpv-5se7	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+hciq-d5f5	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+tpj8-3bpe	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+fgah-rnve	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+qrqr-xi46	encodeQuery	Select RCOLUMN group by RCOLUMN	responsePerf	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
 
-chicagocrime18k, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 18975, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime36k, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 38721, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-chicagocrime77k, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 77236, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
-2jpv-5se7, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 154290, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-hciq-d5f5, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 321568, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-tpj8-3bpe, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 643330, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-fgah-rnve, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 1289030, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
-qrqr-xi46, encodeQuery, Select * order by RCOLUMN limit RLIMIT offset ROFFSET, responsePerf, randomLimit, 1000, randomOffset, 2579286, randomColumn, case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code, disabled
+chicagocrime18k	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	18975	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime36k	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	38721	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+chicagocrime77k	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	77236	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code
+2jpv-5se7	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	154290	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+hciq-d5f5	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	321568	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+tpj8-3bpe	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	643330	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+fgah-rnve	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	1289030	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled
+qrqr-xi46	encodeQuery	Select * order by RCOLUMN limit RLIMIT offset ROFFSET	responsePerf	randomLimit	1000	randomOffset	2579286	randomColumn	case_number|block|primary_type|location_description|domestic|arrest|description|fbi_code	disabled

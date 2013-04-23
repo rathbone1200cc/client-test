@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 
 var program = require('commander'),
-    clientTest = require('./lib/clientTest.js'),
-    customAssert = require("./src/assert.js")
+    clientTest = require('./lib/clientTest.js')
 
 program
   .version('0.0.1')
   .usage('[options] <hostname ...>')
   .usage('[options] <hostname ...>')
-  .option('--input <file>', 'Use defaultParser (line-by-line URLs) to parse the input file')
-  .option('--soql <file>', 'use soqlParser to parse the input file')
-  .option('--hydra <file>', 'Use hydraParser to parse the input file')
-  .option('--json <file>', 'Use jsonParser to parse the input file')
+  .option('--input <file>', 'Use defaultTestGenerator (line-by-line URLs) to parse the input file')
+  .option('--rath <file>', 'use rathTestGenerator to parse the input file')
+  .option('--hydra <file>', 'Use hydraTestGenerator to parse the input file')
+  .option('--json <file>', 'Use jsonTestGenerator to parse the input file')
   .option('-d, --driver <driver>', 'Driver to use: <node|phantom>')
   .option('-c, --concurrency <count>', 'Number of concurrent requests')
   .option('-n, --requests <count>', 'Total number of requests')
@@ -19,36 +18,33 @@ program
   .option('--repro <filename>', 'Creates a log of runtime test definitions that can be rerun for reproducibility')
   .on('--help', function() {
     console.log("  Examples:")
-    console.log("    $ ./run-tests.js -c 5 -n 100 --soql input/soql_sample.csv https://opendata.test-socrata.com")
+    console.log("    $ ./run-tests.js -c 5 -n 100 --rath input/soql_sample.csv https://opendata.test-socrata.com")
     console.log("    $ ./run-tests.js -c 5 -n 100 --driver phantom --soq input/staging-html.csv https://opendata.test-socrata.com")
-    console.log("    $ ./run-tests.js --compare count --soql input/soql_sample.csv https://opendata.test-socrata.com http://localhost:9292")
+    console.log("    $ ./run-tests.js --compare count --rath input/soql_sample.csv https://opendata.test-socrata.com http://localhost:9292")
     console.log("")
   })
   .parse(process.argv);
 
 
-var parserName, inputFile;
-if(program.soql) {
-	parserName = "soqlParser"
-	inputFile = program.soql
+var generatorName, inputFile;
+if(program.rath) {
+  require('./src/generators/rathTestGenerator.js').register()
+	generatorName = "rathTestGenerator"
+	inputFile = program.rath
 } else if(program.hydra) {
-	parserName = "hydraParser"
+  require('./src/generators/hydraTestGenerator.js').register()
+	generatorName = "hydraTestGenerator"
 	inputFile = program.hydra
 } else if(program.input) {
-	parserName = "defaultParser"
+	generatorName = "defaultTestGenerator"
 	inputFile = program.input
 } else if(program.json) {
-  parserName = "jsonParser"
+  generatorName = "jsonTestGenerator"
   inputFile = program.json
 } else {
-  console.log("  Must specify a parser.")
+  console.log("  Must specify a test generator.")
   program.help()
 }
-
-
-//var parser = require("./src/parsers/" + parserName + ".js")
-// var hostnames = program.args || "UNDEFINED_HOSTNAME"
-//var tests = parser.makeTests(inputFile, hostnames)
 
 
 var options = {}
@@ -58,27 +54,19 @@ options.defaultTestDefinition = {
   compare : program.compare ? [program.compare] : undefined
 }
 
-options.parserContext = {
-  parserName : parserName,
+options.generatorContext = {
+  name : generatorName,
   hostnames : program.args || "UNDEFINED_HOSTNAME",
   inputFile : inputFile,
 }
 
-//options.driver = program.driver || "nodeRequest"
-//options.compare = program.compare ?[customAssert.getComparator(program.compare)] : undefined
 options.concurrency = program.concurrency || 1
 options.totalRequests = program.requests || tests.length
 options.reproLog = program.repro || undefined
 
-console.log("Command line args:")
-console.log("\toptions:\t" + JSON.stringify(options))
+console.log("Running with options:")
+console.log(options)
 console.log("------------------------------------")
 
-
-
-clientTest.registerAssertion('rowCount', customAssert.getAssertion('rowCount'))
-clientTest.registerAssertion('resultShape', customAssert.getAssertion('resultShape'))
-clientTest.registerComparator('resultsMatch', customAssert.getComparator('resultsMatch'))
-clientTest.registerComparator('rowCountsMatch', customAssert.getComparator('rowCountsMatch'))
 
 clientTest.run( options, function() { console.log("Finished testing.") })
