@@ -1,14 +1,15 @@
 {
-	"name":"node-soc-int",
-	"version": "0.0.1",
-	"bin": {
-		"node-soc-int": "./run-tests.js"
-	},
+	"name":"client-test",
+	"version": "0.0.2",
+  "main": "./lib/clientTest.js",
   "dependencies": {
     "async": "0.1.18",
     "phantom":"0.4.1",
     "underscore":"1.3.3",
-    "underscore.string":"2.2.0rc",
-    "commander":"1.1.1"
-  }
+    "underscore.string":"2.2.0rc"
+  },
+  "engines": {
+    "node" :  "0.9.12",
+    "phantomjs" : "1.9.*"
+  }  
 }
