@@ -2,7 +2,8 @@
 <testsuite name="<%- suite.name %>"
            errors="<%- suite.errorCount %>"
            failures="<%- suite.failureCount %>"
-           tests="<%- suite.testCount %>">
+           tests="<%- suite.testCount %>"
+           time="<%- suite.duration %>">
 
 <%= testcases %>
 
