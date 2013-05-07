@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="<%- suite.name %>"
+           errors="<%- suite.errorCount %>"
+           failures="<%- suite.failureCount %>"
+           tests="<%- suite.testCount %>">
+
+<%= testcases %>
+
+</testsuite>
