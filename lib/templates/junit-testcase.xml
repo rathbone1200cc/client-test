@@ -1,4 +1,4 @@
-<testcase name="<%- testcase.name %>">
+<testcase name="<%- testcase.name %>" time="<%- testcase.duration %>">
   <% _.each(testcase.failures, function(failure) { %>
     <failure message="<%- failure.message %>" type="<%- failure.type %>">
       <% if (failure.backtrace) { %>
