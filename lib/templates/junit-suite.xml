@@ -3,7 +3,7 @@
            errors="<%- suite.errorCount %>"
            failures="<%- suite.failureCount %>"
            tests="<%- suite.testCount %>"
-           time="<%- suite.duration %>">
+           time="<%- suite.duration/1000.0 %>">
 
 <%= testcases %>
 
