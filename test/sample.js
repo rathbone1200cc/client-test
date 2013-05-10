@@ -1,6 +1,6 @@
 var assert = require('assert'),
     clientTest = require('../lib/clientTest.js'),
-    _ = require('underscore')
+    _ = require('lodash')
 
 describe('injecting client tests', function(){
   var files = ['./input/staging_soql_perf.csv']
