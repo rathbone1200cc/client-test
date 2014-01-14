@@ -3,6 +3,7 @@
 var
 util = require('util'),
 driver = require('./lib/prototypes/driver')
+generator = require('./lib/prototypes/generator')
 noop = require('./lib/drivers/noop')
 program = require('commander')
 ;
@@ -24,6 +25,8 @@ inspect(program);
 var d = driver(noop);
 var test = {};
 
-d.drive( test, function(){
+var g = generator();
+
+d.drive( g.nextTest(), function(){
   log("control returned from driver");
 });
