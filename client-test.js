@@ -2,9 +2,11 @@
 
 var
 util = require('util'),
-driver = require('./lib/prototypes/driver')
-generator = require('./lib/prototypes/generator')
-noop = require('./lib/drivers/noop')
+control = require('./lib/control'),
+driver = require('./lib/prototypes/driver'),
+generator = require('./lib/prototypes/generator'),
+csvGenerator = require('./lib/generators/csv'),
+noop = require('./lib/drivers/noop'),
 program = require('commander')
 ;
 
@@ -23,10 +25,13 @@ program
 inspect(program);
 
 var d = driver(noop);
-var test = {};
+var g = generator(csvGenerator);
+var suite = {
+  options: program,
+  generator: g,
+  driver: d
+}
 
-var g = generator();
+control.runSuite(suite);
+g.input('input/sample.csv');
 
-d.drive( g.nextTest(), function(){
-  log("control returned from driver");
-});
