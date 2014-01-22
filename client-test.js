@@ -3,7 +3,6 @@ util = require('util'),
 control = require('./lib/control'),
 driver = require('./lib/prototypes/driver'),
 generator = require('./lib/prototypes/generator'),
-csvGenerator = require('./lib/generators/csv'),
 program = require('commander')
 _ = require('lodash')
 ;
@@ -49,8 +48,6 @@ exports.run = function(){
   })
   ;
 
-  var g = generator(csvGenerator);
-
   _.each(drivers, function(dmod, command){
     var d = driver(dmod);
     var subcommand = program.command(command);
@@ -58,13 +55,7 @@ exports.run = function(){
       subcommand.option(d.options[t].option, d.options[t].description);
     }
     subcommand.action(function (options){
-      var suite = {
-        options: program,
-        generator: g,
-        driver: d
-      }
-      //g.input('input/sample.csv');
-      control.runSuite(suite);
+      startRuns(d, options, options.parent);
     });
     subcommand.on("--help", function (){
       if (d.examples){
@@ -81,4 +72,15 @@ exports.run = function(){
   program.parse(process.argv);
 }
 
-
+function startRuns(driver, driverOptions){
+  var suiteOptions = driverOptions.parent;
+  var gmod = require( program.generator || './lib/generators/urls');
+  var g = generator(gmod);
+  var suite = {
+    options: program,
+    generator: g,
+    driver: driver
+  }
+  control.runSuite(suite);
+  g.input(program.input || './input/urls.txt');
+}

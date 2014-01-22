@@ -1,0 +1,2 @@
+http://socrata.com
+http://opendata.socrata.com
