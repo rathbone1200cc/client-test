@@ -5,4 +5,5 @@ noop = require('./lib/drivers/noop'),
 clientTest = require('./client-test')
 ;
 
-clientTest(noop);
+clientTest.addDriver('noop', noop);
+clientTest.run();
