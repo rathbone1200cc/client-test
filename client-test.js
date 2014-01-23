@@ -1,5 +1,6 @@
 var
 util = require('util'),
+fs = require('fs'),
 control = require('./lib/control'),
 driver = require('./lib/prototypes/driver'),
 generator = require('./lib/prototypes/generator'),
@@ -30,6 +31,7 @@ exports.run = function(){
   .option('-n, --number <integer>', 'number of tests (default to number of tests input)')
   .option('-g, --generator <path>', 'path to test generator script. Must be a node module')
   .option('-i, --input <path>', 'input file for test generator script.')
+  .option('-s, --suite <path>', 'suite options and variations that override test options')
   .on("--help", function(){
     log('  For command-specific options, run: ' + program._name + ' <command> --help');
     log('');
@@ -55,7 +57,7 @@ exports.run = function(){
       subcommand.option(d.options[t].option, d.options[t].description);
     }
     subcommand.action(function (options){
-      startRuns(d, options, options.parent);
+      startRuns(d, options);
     });
     subcommand.on("--help", function (){
       if (d.examples){
@@ -73,14 +75,49 @@ exports.run = function(){
 }
 
 function startRuns(driver, driverOptions){
-  var suiteOptions = driverOptions.parent;
-  var gmod = require( program.generator || './lib/generators/urls');
-  var g = generator(gmod);
-  var suite = {
-    options: program,
-    generator: g,
-    driver: driver
-  }
-  control.runSuite(suite);
-  g.input(program.input || './input/urls.txt');
+  var variations = makeVariations(driver, driverOptions);
+  control.runSuites(variations, function(){
+    log("testing complete");
+  });
+}
+
+function makeVariations(driver, driverOptions){
+  var program = driverOptions.parent;
+  function sliceOption(opt){return opt.long.slice(2)};
+  var allOptions = _.map(program.options, sliceOption).concat(_.map(driverOptions.options, sliceOption));
+  //inspect(allOptions);
+  var suiteSpec = program.suite ? JSON.parse(fs.readFileSync(program.suite)) : {};
+  var variations = exports.explode({}, suiteSpec.variations);
+  debugger;
+  var suites = _.map(variations, function(options){
+    var gmod = require( options.generator || './lib/generators/urls');
+    var g = generator(gmod);
+    var suite = {
+      options: _.pick(options, allOptions),
+      program: _.pick(program, allOptions),
+      generator: g,
+      input: options.input || './input/urls.txt',
+      driver: driver,
+      driverOptions: _.pick(driverOptions, allOptions)
+    }
+    inspect(suite);
+    return suite;
+  });
+  return suites;
+}
+
+exports.explode = function(base, variations){
+  var exploded = [base || {}];
+  _.each(variations, function (values, option){
+    var acc = [];
+    _.each(values, function(value){
+      var dup = _.cloneDeep(exploded);
+      _.each(dup, function(d){
+        d[option] = value;
+        acc.push(d);
+      });
+    });
+    exploded = acc;
+  });
+  return exploded;
 }

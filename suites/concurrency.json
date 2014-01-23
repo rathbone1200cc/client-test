@@ -1,0 +1,5 @@
+{
+  "variations":{
+    "concurrency":[1, 4, 16]
+  }
+}
