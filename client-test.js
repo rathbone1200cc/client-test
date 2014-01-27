@@ -41,6 +41,7 @@ exports.run = function(){
     log('    ./' + program._name + ' http --help    # output help for the http driver');
     log('');
     log('    ./' + program._name + ' -i ./input/sample.csv -g ./lib/generators/csv.js -n 1000 -c 16 http -p');
+    log('');
     log('                                # read file sample.csv');
     log('                                # through "csv" test generator');
     log('                                # run a total of 1000 tests');
@@ -72,6 +73,8 @@ exports.run = function(){
   });
 
   program.parse(process.argv);
+  if (program.args.length === 0) program.help();
+  debugger;
 }
 
 function startRuns(driver, driverOptions){
