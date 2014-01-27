@@ -1,2 +1,9 @@
-http://socrata.com
-http://opendata.socrata.com
+http://socrata.com?n=1
+http://socrata.com?n=2
+http://socrata.com?n=3
+http://socrata.com?n=4
+http://socrata.com?n=5
+http://socrata.com?n=6
+http://socrata.com?n=7
+http://socrata.com?n=8
+http://socrata.com?n=9
