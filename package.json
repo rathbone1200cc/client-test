@@ -1,7 +1,7 @@
 {
   "name": "client-test",
-  "version": "0.0.2",
-  "main": "./lib/clientTest.js",
+  "version": "0.1.1",
+  "main": "runHttp.js",
   "dependencies": {
     "async": "0.1.18",
     "phantom": "0.4.1",
