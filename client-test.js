@@ -33,6 +33,7 @@ exports.run = function(){
   .option('-i, --input <path>', 'input file for test generator script.')
   .option('-s, --suite <path>', 'suite options and variations that override test options')
   .option("-p, --performance", "log response performance metrics")
+  .option("-a, --assert <assertion[:expected]>", "verify response with named assertion (and expectation)")
   .on("--help", function(){
     log('  For command-specific options, run: ' + program._name + ' <command> --help');
     log('');
