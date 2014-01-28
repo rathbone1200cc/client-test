@@ -101,7 +101,7 @@ function makeVariations(driver, driverOptions){
     var gmod = require( variation.generator || './lib/generators/urls');
     var g = generator(gmod);
     var suite = {
-      options: _.assign( _.pick(variation, allOptions), _.pick(program, allOptions)),
+      options: _.assign( _.pick(variation, allOptions), _.pick(driverOptions,allOptions), _.pick(program, allOptions)),
       generator: g,
       input: program.input || './input/urls.txt',
       driver: driver,
