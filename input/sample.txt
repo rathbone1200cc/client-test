@@ -1,9 +1,3 @@
-http://socrata.com?n=1
-http://socrata.com?n=2
-http://socrata.com?n=3
-http://socrata.com?n=4
-http://socrata.com?n=5
-http://socrata.com?n=6
-http://socrata.com?n=7
-http://socrata.com?n=8
-http://socrata.com?n=9
+http://opendata.test-socrata.com
+http://opendata.test-socrata.com/Medical/Hospitals/ptng-2k73
+https://opendata.test-socrata.com/resource/ptng-2k73.json

@@ -27,11 +27,12 @@ exports.run = function(){
   program
   .version('0.1.0')
   .usage("[client-test-options] <command> [options]")
-  .option('-c --concurrency <integer>', 'test concurrency (default 1)', parseInt)
+  .option('-c, --concurrency <integer>', 'test concurrency (default 1)', parseInt)
   .option('-n, --number <integer>', 'number of tests (default to number of tests input)')
   .option('-g, --generator <path>', 'path to test generator script. Must be a node module')
   .option('-i, --input <path>', 'input file for test generator script.')
   .option('-s, --suite <path>', 'suite options and variations that override test options')
+  .option("-p, --performance", "log response performance metrics")
   .on("--help", function(){
     log('  For command-specific options, run: ' + program._name + ' <command> --help');
     log('');
@@ -74,12 +75,17 @@ exports.run = function(){
 
   program.parse(process.argv);
   if (program.args.length === 0) program.help();
+  else if (program.args.length === 1 && "string" === typeof(program.args[0])){
+    log("");
+    log("  ERROR: unrecognized command '" + program.args[0] + "'");
+    log("    you can extend client-test with http drivers to add a command");
+    program.help();
+  }
 }
 
 function startRuns(driver, driverOptions){
   var variations = makeVariations(driver, driverOptions);
   control.runSuites(variations, function(){
-    debugger;
     log("testing complete");
   });
 }
