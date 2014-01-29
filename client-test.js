@@ -22,6 +22,8 @@ exports.addDriver = function(dname, dmod){
   return exports;
 }
 
+
+
 exports.run = function(){
 
   program
@@ -33,6 +35,7 @@ exports.run = function(){
   .option('-i, --input <path>', 'input file for test generator script.')
   .option('-s, --suite <path>', 'suite options and variations that override test options')
   .option("-p, --performance", "log response performance metrics")
+  .option("-h, --host <hostname>", "host domain or IP address")
   .option("-a, --assert <assertion[:expected]>", "verify response with named assertion (and expectation)")
   .on("--help", function(){
     log('  For command-specific options, run: ' + program._name + ' <command> --help');
@@ -99,7 +102,8 @@ function makeVariations(driver, driverOptions){
   var suiteSpec = program.suite ? JSON.parse(fs.readFileSync(program.suite)) : {};
   var variations = exports.explode({}, suiteSpec.variations);
   var suites = _.map(variations, function(variation){
-    var gmod = require( variation.generator || './lib/generators/urls');
+    gpath = program.generator || variation.generator || './lib/generators/urls'
+    var gmod = require( gpath );
     var g = generator(gmod);
     var suite = {
       options: _.assign( _.pick(variation, allOptions), _.pick(driverOptions,allOptions), _.pick(program, allOptions)),
