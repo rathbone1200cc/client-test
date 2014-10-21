@@ -30,6 +30,7 @@ exports.run = function(){
   .version('0.1.0')
   .usage("[client-test-options] <command> [options]")
   .option('-c, --concurrency <integer>', 'test concurrency (default 1)', parseInt)
+  .option('-d, --delay <integer>', 'delay milliseconds before test (default 0) - not to be used with concurrency', parseInt)
   .option('-n, --number <integer>', 'number of tests (default to number of tests input)')
   .option('-g, --generator <path>', 'path to test generator script. Must be a node module')
   .option('-i, --input <path>', 'input file for test generator script.')
